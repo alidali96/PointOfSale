@@ -1,74 +1,30 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends Application {
     public static ArrayList<Phone> phones = new ArrayList<Phone>();
     public static ArrayList<Phone> cart  = new ArrayList<Phone>();
 
     public static void main(String[] args) {
+        Application.launch(args);
+    }
 
-        final double TAX = 0.13;
-        double subtotal = 0;
-        double taxTotal = 0;
-        double total = 0;
-        boolean browse = true;
-        String customerInput;
-        double customerPayment = 0;
-        double change = 0;
-
-        getShopItems();
-
-        System.out.println("Welcome to Media Markt!");
-        System.out.println("=======================");
-        Scanner input = new Scanner(System.in);
-
-        do {
-            outputPhones();
-
-            System.out.print("Please select a phone: ");
-            customerInput = input.nextLine();
-
-            for (Phone phone :
-                    phones) {
-                if (phone.getId().equals(customerInput)) {
-                    subtotal += phone.getPrice();
-                    taxTotal = subtotal * TAX;
-                    total = subtotal + taxTotal;
-                    System.out.println(String.format(" - Subtotal: $%.2f \n - Tax: $%.2f \n - Total: $%.2f", subtotal, taxTotal, total));
-                    cart.add(phone);
-                    phones.remove(phone);
-                    break;
-                }
-            }
-
-            System.out.println("Do you want to buy another item? (Y/N)");
-            customerInput = input.nextLine();
-
-            if (customerInput.toUpperCase().equals("N")) {
-                browse = false;
-                do {
-                    System.out.print("Your Payment: ");
-                    customerPayment = input.nextDouble();
-                } while (customerPayment < total);
-                change = customerPayment - total;
-            }
-        } while (browse);
-
-        System.out.println("-------------------------");
-        for (Phone phone :
-                cart) {
-            System.out.println(phone.getSummary());
-        }
-        System.out.println("-------------------------");
-
-        System.out.println(String.format(" - Subtotal: $%.2f \n - Tax: $%.2f \n - Total: $%.2f \n - Paid: %.2f \n - Change: %.2f", subtotal, taxTotal, total, customerPayment, change));
-
-        System.out.println("Date: " + new Date());
-        System.out.println("Thank you for shopping by Media Markt!");
-
-        updateShop();
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Point Of Sale");
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 
     private static void getShopItems() {
@@ -104,4 +60,6 @@ public class Main {
             System.out.println(phone.getDetails());
         }
     }
+
+
 }
