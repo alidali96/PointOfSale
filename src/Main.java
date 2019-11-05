@@ -27,39 +27,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    private static void getShopItems() {
-        try {
-            String line;
-            BufferedReader in = new BufferedReader(new FileReader(new File("data/products.txt")));
-            while((line = in.readLine()) != null) {
-                String[] details = line.split(",");
-                phones.add(new Phone(details[0], details[1], details[2], details[3], Double.parseDouble(details[4])));
-            }
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
-    private static void updateShop() {
-        try {
-            BufferedWriter out = new BufferedWriter(new FileWriter(new File("data/products.txt")));
-            for (Phone phone :
-                    phones) {
-                out.write(phone.generateCSV());
-            }
-            out.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static void outputPhones() {
-        for (Phone phone :
-                phones) {
-            System.out.println(phone.getDetails());
-        }
-    }
 
 
 }

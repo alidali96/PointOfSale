@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c2ca2e-e643-42fa-9e6f-9c8abd9eb97c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Phone.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -74,7 +82,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

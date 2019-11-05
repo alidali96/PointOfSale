@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TextField fx:id="itemId" layoutX="25.0" layoutY="24.0" promptText="Enter Item ID" />
+      <Button layoutX="209.0" layoutY="24.0" mnemonicParsing="false" onAction="#addToSale" text="Add Item to Sale" />
+      <TextArea fx:id="inventoryDisplay" disable="true" layoutX="25.0" layoutY="60.0" prefHeight="160.0" prefWidth="550.0" promptText="Inventory" />
+      <TextArea fx:id="saleDisplay" disable="true" layoutX="25.0" layoutY="230.0" prefHeight="160.0" prefWidth="550.0" promptText="Sales" />
+   </children>
+</Pane>
