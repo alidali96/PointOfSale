@@ -1,3 +1,7 @@
+package controller;
+
+import model.Model;
+import app.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -90,26 +94,34 @@ public class Controller implements Initializable {
 
     public void purchase(ActionEvent actionEvent) {
         // TODO add all buttons to a pane and disable it instead
-        itemId.setDisable(true);
-        addItemButton.setDisable(true);
-        removeItemButton.setDisable(true);
-        purchaseButton.setDisable(true);
+        if(!model.getCart().isCartEmpty()) {
+            itemId.setDisable(true);
+            addItemButton.setDisable(true);
+            removeItemButton.setDisable(true);
+            purchaseButton.setDisable(true);
 
-        amountDue.setText(String.format("Total: $%.2f", model.getSale().getTotal()));
+            amountDue.setText(String.format("Total: $%.2f", model.getSale().getTotal()));
 
-        paymentPane.setVisible(true);
+            paymentPane.setVisible(true);
+        } else {
+            System.out.println("Cart is empty");
+        }
     }
 
     public void payAmount(ActionEvent actionEvent) {
-        double payment = Double.parseDouble(customerPayment.getText());
-        if (model.getSale().makeTransaction(payment)) {
-            saleDisplay.setVisible(true);
-            amountNotEnough.setVisible(false);
-            paymentPane.setDisable(true);
-            updateSaleScreen();
-            model.getInventory().updateInventory();
-        } else {
-            amountNotEnough.setVisible(true);
+        try{
+            double payment = Double.parseDouble(customerPayment.getText());
+            if (model.getSale().makeTransaction(payment)) {
+                saleDisplay.setVisible(true);
+                amountNotEnough.setVisible(false);
+                paymentPane.setDisable(true);
+                updateSaleScreen();
+                model.getInventory().updateInventory();
+            } else {
+                amountNotEnough.setVisible(true);
+            }
+        } catch (Exception e) {
+            System.out.println("Not valid payment");
         }
     }
 }

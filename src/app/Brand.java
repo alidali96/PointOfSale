@@ -1,3 +1,5 @@
+package app;
+
 public enum Brand {
 
     SAMSUNG, HTC, HAUWEI, SONY, NOKIA;

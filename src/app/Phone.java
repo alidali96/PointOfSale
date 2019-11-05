@@ -1,3 +1,5 @@
+package app;
+
 public class Phone extends Product implements ProductDetails{
 
     private Type type;
@@ -13,7 +15,7 @@ public class Phone extends Product implements ProductDetails{
 
     @Override
     public String getDetails() {
-        return String.format("ID: %s - Type: %s - Brand: %s - Model: %s - Price: $%.2f", getId(), type, brand, model, getPrice());
+        return String.format("ID: %s - Type: %s - Brand: %s - Model.Model: %s - Price: $%.2f", getId(), type, brand, model, getPrice());
     }
 
     @Override

@@ -1,3 +1,5 @@
+package app;
+
 import java.util.ArrayList;
 
 public class Cart {
@@ -45,5 +47,9 @@ public class Cart {
             result += product.getSummary() + "\n";
         }
         return result;
+    }
+
+    public boolean isCartEmpty() {
+        return this.products.isEmpty();
     }
 }

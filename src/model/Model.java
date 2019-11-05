@@ -1,3 +1,10 @@
+package model;
+
+import app.Cart;
+import app.Inventory;
+import app.Product;
+import app.Sale;
+
 public class Model {
 
     private static Model model;

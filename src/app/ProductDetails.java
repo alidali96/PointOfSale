@@ -1,3 +1,5 @@
+package app;
+
 public interface ProductDetails {
 
     String getDetails();
