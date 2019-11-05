@@ -3,10 +3,7 @@ import java.util.ArrayList;
 
 public class Inventory {
 
-    // We need a list for every type of products
-    public static ArrayList<Product> products = new ArrayList<Product>();
-    public static ArrayList<Phone> phones = new ArrayList<Phone>();
-
+    public static ArrayList<Product> products = new ArrayList<>();
 
     // Populate all lists in inventory
     public Inventory() {
@@ -27,11 +24,9 @@ public class Inventory {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
-    public void updateInventory(ArrayList<Product> products) {
+    public void updateInventory() {
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter(new File("data/products.txt")));
             for (Product product :

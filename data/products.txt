@@ -1,5 +1,3 @@
-1,Phone,Samsung,Galaxy S10,1199.99
-2,Phone,Samsung,Note 10,1499.99
 3,Phone,Samsung,Folde,2499.99
 4,Phone,HTC,One,699.99
 5,Phone,HTC,M8,399.99

@@ -6,7 +6,7 @@ public class Cart {
 
 
     public Cart() {
-        this.products = new ArrayList<Product>();
+        this.products = new ArrayList<>();
     }
 
 
@@ -34,6 +34,15 @@ public class Cart {
         for (Product product :
                 products) {
             result += product.getDetails() + "\n";
+        }
+        return result;
+    }
+
+    public String getSummary() {
+        String result = "";
+        for (Product product :
+                products) {
+            result += product.getSummary() + "\n";
         }
         return result;
     }

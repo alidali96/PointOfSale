@@ -10,13 +10,6 @@ public class Product implements ProductDetails {
         this.type = type;
     }
 
-//    public abstract String getDetails();
-//
-//    public abstract String getSummary();
-//
-//    public abstract String generateCSV();
-
-
     public String getId() {
         return id;
     }

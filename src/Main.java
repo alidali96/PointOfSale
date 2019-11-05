@@ -10,8 +10,6 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main extends Application {
-    public static ArrayList<Phone> phones = new ArrayList<Phone>();
-    public static ArrayList<Phone> cart  = new ArrayList<Phone>();
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -22,7 +20,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Point Of Sale");
+        primaryStage.setTitle("Point Of Sale v2.0");
         primaryStage.setResizable(false);
         primaryStage.show();
     }

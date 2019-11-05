@@ -3,20 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="82c2ca2e-e643-42fa-9e6f-9c8abd9eb97c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Brand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Cart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Inventory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Inventory$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Sale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Sale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Phone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Type.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
