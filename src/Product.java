@@ -1,4 +1,4 @@
-public abstract class Product {
+public class Product implements ProductDetails {
 
     private String id;
     private double price;
@@ -10,9 +10,12 @@ public abstract class Product {
         this.type = type;
     }
 
-    public abstract String getDetails();
-    public abstract String getSummary();
-    public abstract String generateCSV();
+//    public abstract String getDetails();
+//
+//    public abstract String getSummary();
+//
+//    public abstract String generateCSV();
+
 
     public String getId() {
         return id;
@@ -36,5 +39,21 @@ public abstract class Product {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+
+    @Override
+    public String getDetails() {
+        return null;
+    }
+
+    @Override
+    public String getSummary() {
+        return null;
+    }
+
+    @Override
+    public String generateCSV() {
+        return null;
     }
 }

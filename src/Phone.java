@@ -1,4 +1,4 @@
-public class Phone extends Product{
+public class Phone extends Product implements ProductDetails{
 
     private Type type;
     private Brand brand;
