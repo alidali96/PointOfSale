@@ -1,10 +1,6 @@
 package controller;
 
-import app.Inventory;
-import app.Phone;
 import app.Product;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,8 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
-import javafx.util.Callback;
-import model.Model;
 import model.Model_2;
 
 import java.net.URL;
@@ -40,17 +34,27 @@ public class Controller_2 implements Initializable {
     @FXML
     TableView inventory;
     @FXML
-    TableColumn<Product, String> columnID;
+    TableColumn<Product, String> inventoryID;
     @FXML
-    TableColumn<Product, String> columnBrand;
+    TableColumn<Product, String> inventoryBrand;
     @FXML
-    TableColumn<Product, String> columnModel;
+    TableColumn<Product, String> inventoryModel;
     @FXML
-    TableColumn<Product, Double> columnPrice;
+    TableColumn<Product, Double> inventoryPrice;
 
 
     @FXML
-    TextArea cartDisplay;
+    TableView cart;
+    @FXML
+    TableColumn<Product, String> cartID;
+    @FXML
+    TableColumn<Product, String> cartBrand;
+    @FXML
+    TableColumn<Product, String> cartModel;
+    @FXML
+    TableColumn<Product, Double> cartPrice;
+
+
     @FXML
     TextArea saleDisplay;
     @FXML
@@ -59,34 +63,48 @@ public class Controller_2 implements Initializable {
     Label amountDue;
 
 
-    ObservableList<Product> data;
+    ObservableList<Product> inventoryItems;
+    ObservableList<Product> cartItems;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        updateInventoryScreen();
+//        updateInventoryScreen();
 
-        columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
-        columnBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
-        columnModel.setCellValueFactory(new PropertyValueFactory<>("model"));
-        columnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        inventoryID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        inventoryBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        inventoryModel.setCellValueFactory(new PropertyValueFactory<>("model"));
+        inventoryPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
 
 
-        data = model.getDataList();
+        inventoryItems = model.getInventoryItems();
         inventory.setEditable(true);
 
-        inventory.setItems(data);
+        inventory.setItems(inventoryItems);
+
+
+
+        cartID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        cartBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        cartModel.setCellValueFactory(new PropertyValueFactory<>("model"));
+        cartPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+
+        cartItems = model.getCartItems();
+        cart.setEditable(true);
+
+        cart.setItems(cartItems);
     }
 
     private void updateInventoryScreen() {
-//        inventoryDisplay.setText(model.getInventory().getAllProducts());
-        data.removeAll();
-        data = model.getDataList();
-        inventory.setItems(data);
-//        inventory.refresh();
+        inventoryItems.removeAll();
+        inventoryItems = model.getInventoryItems();
+        inventory.setItems(inventoryItems);
     }
 
     private void updateCartScreen() {
-        cartDisplay.setText(model.getCart().getAllProducts());
+        cartItems.removeAll();
+        cartItems = model.getCartItems();
+        cart.setItems(cartItems);
     }
 
     private void updateSaleScreen() {
@@ -116,7 +134,7 @@ public class Controller_2 implements Initializable {
             if (product != null) {
                 model.removeProductFromCart(product);
                 updateInventoryScreen();
-//                updateCartScreen();
+                updateCartScreen();
             } else {
                 System.out.println("Not found");
             }

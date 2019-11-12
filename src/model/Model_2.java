@@ -52,9 +52,13 @@ public class Model_2 {
         return sale;
     }
 
-//
-    public ObservableList getDataList() {
+
+    public ObservableList getInventoryItems() {
         return FXCollections.observableArrayList(Inventory.products);
+    }
+
+    public ObservableList getCartItems() {
+        return FXCollections.observableArrayList(Cart.products);
     }
 
 }

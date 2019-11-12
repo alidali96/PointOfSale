@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="82c2ca2e-e643-42fa-9e6f-9c8abd9eb97c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/app/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/app/Phone.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/app/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/app/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/model/Model_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/model/Model_2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/view/Main_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/view/Main_2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Model_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Model_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Main_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main_2.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
