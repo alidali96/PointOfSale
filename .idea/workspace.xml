@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="82c2ca2e-e643-42fa-9e6f-9c8abd9eb97c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/products - Copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/products - Copy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/app/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/app/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/app/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/app/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/app/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/app/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller_2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/view/Main_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/view/Main_2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Main_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main_2.fxml" afterDir="false" />
     </list>

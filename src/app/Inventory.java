@@ -18,7 +18,7 @@ public class Inventory {
                 // Whenever we add a new type we can will have to add another case
                 switch (Type.toType(details[1])) {
                     case PHONE:
-                        products.add(new Phone(details[0], Brand.toBrand(details[2]), details[3], Double.parseDouble(details[4])));
+                        products.add(new Phone(details[0], Brand.toBrand(details[2]), details[3], details[4], Double.parseDouble(details[5])));
                 }
 
             }

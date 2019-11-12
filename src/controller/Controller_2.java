@@ -4,6 +4,7 @@ import app.Phone;
 import app.Product;
 import javafx.beans.property.ReadOnlyObjectPropertyBase;
 import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -46,6 +47,8 @@ public class Controller_2 implements Initializable {
     @FXML
     TableColumn<Product, Double> inventoryPrice;
     @FXML
+    TableColumn<Product, Product> inventoryCondition;
+    @FXML
     TableColumn<Product, Product> inventoryDetails;
 
 
@@ -59,6 +62,8 @@ public class Controller_2 implements Initializable {
     TableColumn<Product, String> cartModel;
     @FXML
     TableColumn<Product, Double> cartPrice;
+    @FXML
+    TableColumn<Product, Product> cartCondition;
     @FXML
     TableColumn<Product, Product> cartDetails;
 
@@ -83,6 +88,30 @@ public class Controller_2 implements Initializable {
         inventoryModel.setCellValueFactory(new PropertyValueFactory<>("model"));
         inventoryPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
 
+        // ComboBox
+        inventoryCondition.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+
+        inventoryCondition.setCellFactory(param -> new TableCell<Product, Product>() {
+            ComboBox condition = new ComboBox();
+            ObservableList<String> conditions = FXCollections.observableArrayList(Product.getConditionsList());
+
+            @Override
+            public void updateItem(Product product, boolean empty) {
+                if (empty) {
+                    setGraphic(null);
+                    return;
+                }
+
+                condition.setItems(conditions);
+                condition.setValue(product.getCondition());
+
+                condition.setOnAction(e -> product.setCondition(condition.getValue().toString()));
+                setGraphic(condition);
+            }
+
+        });
+
+
         // Button
         inventoryDetails.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
 
@@ -98,11 +127,10 @@ public class Controller_2 implements Initializable {
                     return;
                 }
 
-                button.setOnAction(e-> System.out.println(product));
+                button.setOnAction(e -> System.out.println(product));
                 setGraphic(button);
             }
         });
-
 
 
         inventoryItems = model.getInventoryItems();
@@ -115,6 +143,31 @@ public class Controller_2 implements Initializable {
         cartBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
         cartModel.setCellValueFactory(new PropertyValueFactory<>("model"));
         cartPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+
+        // ComboBox
+        cartCondition.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+
+        cartCondition.setCellFactory(param -> new TableCell<Product, Product>() {
+            ComboBox condition = new ComboBox();
+            ObservableList<String> conditions = FXCollections.observableArrayList(Product.getConditionsList());
+
+            @Override
+            public void updateItem(Product product, boolean empty) {
+                if (empty) {
+                    setGraphic(null);
+                    return;
+                }
+
+                condition.setItems(conditions);
+                condition.setValue(product.getCondition());
+
+                condition.setOnAction(e -> product.setCondition(condition.getValue().toString()));
+                setGraphic(condition);
+            }
+
+        });
+
 
         // Button
         cartDetails.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
@@ -131,11 +184,10 @@ public class Controller_2 implements Initializable {
                     return;
                 }
 
-                button.setOnAction(e-> System.out.println(product));
+                button.setOnAction(e -> System.out.println(product));
                 setGraphic(button);
             }
         });
-
 
 
         cartItems = model.getCartItems();

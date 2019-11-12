@@ -6,8 +6,8 @@ public class Phone extends Product implements ProductDetails {
     private Brand brand;
     private String model;
 
-    public Phone(String id, Brand brand, String model, double price) {
-        super(id, price, Type.PHONE);
+    public Phone(String id, Brand brand, String model, String condition, double price) {
+        super(id, price, Type.PHONE, condition);
         this.brand = brand;
         this.model = model;
         this.type = Type.PHONE;
