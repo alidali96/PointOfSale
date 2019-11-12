@@ -2,36 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c2ca2e-e643-42fa-9e6f-9c8abd9eb97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/products.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Brand$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Brand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Cart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Inventory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Inventory.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Phone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/ProductDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Sale.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Type$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Brand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/app/Phone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/app/Phone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PointOfSale/controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/ProductDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,12 +30,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TAnu1wWyT2fsTuGP0mIqpgzvnV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/view" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+      <recent name="controller" />
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

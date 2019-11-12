@@ -1,6 +1,6 @@
 package app;
 
-public class Phone extends Product implements ProductDetails{
+public class Phone extends Product implements ProductDetails {
 
     private Type type;
     private Brand brand;
@@ -51,6 +51,11 @@ public class Phone extends Product implements ProductDetails{
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %s - Type: %s - Brand: %s - Model.Model: %s - Price: $%.2f", getId(), type, brand, model, getPrice());
     }
 
 }

@@ -1,22 +1,27 @@
 package controller;
 
-import model.Model;
+import app.Inventory;
+import app.Phone;
 import app.Product;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import javafx.util.Callback;
+import model.Model;
+import model.Model_2;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class Controller_2 implements Initializable {
 
-    Model model = Model.getInstance();
+    Model_2 model = Model_2.getInstance();
 
     @FXML
     Button addItemButton;
@@ -33,7 +38,17 @@ public class Controller implements Initializable {
     TextField customerPayment;
 
     @FXML
-    TextArea inventoryDisplay;
+    TableView inventory;
+    @FXML
+    TableColumn<Product, String> columnID;
+    @FXML
+    TableColumn<Product, String> columnBrand;
+    @FXML
+    TableColumn<Product, String> columnModel;
+    @FXML
+    TableColumn<Product, Double> columnPrice;
+
+
     @FXML
     TextArea cartDisplay;
     @FXML
@@ -44,13 +59,30 @@ public class Controller implements Initializable {
     Label amountDue;
 
 
+    ObservableList<Product> data;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        updateInventoryScreen();
+        updateInventoryScreen();
+
+        columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        columnBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
+        columnModel.setCellValueFactory(new PropertyValueFactory<>("model"));
+        columnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+
+        data = model.getDataList();
+        inventory.setEditable(true);
+
+        inventory.setItems(data);
     }
 
     private void updateInventoryScreen() {
-        inventoryDisplay.setText(model.getInventory().getAllProducts());
+//        inventoryDisplay.setText(model.getInventory().getAllProducts());
+        data.removeAll();
+        data = model.getDataList();
+        inventory.setItems(data);
+//        inventory.refresh();
     }
 
     private void updateCartScreen() {
@@ -58,7 +90,7 @@ public class Controller implements Initializable {
     }
 
     private void updateSaleScreen() {
-        saleDisplay.setText(model.getCart().getSummary() + "-----------------------\n" +  model.getSale().getSaleDetail());
+        saleDisplay.setText(model.getCart().getSummary() + "-----------------------\n" + model.getSale().getSaleDetail());
     }
 
 
@@ -84,7 +116,7 @@ public class Controller implements Initializable {
             if (product != null) {
                 model.removeProductFromCart(product);
                 updateInventoryScreen();
-                updateCartScreen();
+//                updateCartScreen();
             } else {
                 System.out.println("Not found");
             }
@@ -94,7 +126,7 @@ public class Controller implements Initializable {
 
     public void purchase(ActionEvent actionEvent) {
         // TODO add all buttons to a pane and disable it instead
-        if(!model.getCart().isCartEmpty()) {
+        if (!model.getCart().isCartEmpty()) {
             itemId.setDisable(true);
             addItemButton.setDisable(true);
             removeItemButton.setDisable(true);
@@ -109,7 +141,7 @@ public class Controller implements Initializable {
     }
 
     public void payAmount(ActionEvent actionEvent) {
-        try{
+        try {
             double payment = Double.parseDouble(customerPayment.getText());
             if (model.getSale().makeTransaction(payment)) {
                 saleDisplay.setVisible(true);
