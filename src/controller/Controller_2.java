@@ -1,5 +1,6 @@
 package controller;
 
+import app.Phone;
 import app.Product;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -65,6 +66,7 @@ public class Controller_2 implements Initializable {
 
     ObservableList<Product> inventoryItems;
     ObservableList<Product> cartItems;
+    String search;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -80,7 +82,6 @@ public class Controller_2 implements Initializable {
         inventory.setEditable(true);
 
         inventory.setItems(inventoryItems);
-
 
 
         cartID.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -113,32 +114,41 @@ public class Controller_2 implements Initializable {
 
 
     public void addToCart(ActionEvent actionEvent) {
-        String search = itemId.getText();
-        if (search != null) {
-            Product product = model.getInventory().findProduct(search);
-            if (product != null) {
-                model.addProductToCart(product);
-                updateInventoryScreen();
-                updateCartScreen();
-            } else {
-                System.out.println("Not found");
-            }
+        if (!itemId.getText().isEmpty()) {
+            search = itemId.getText();
+        } else {
+            if (inventory.getSelectionModel().getSelectedItem() != null)
+                search = ((Phone) inventory.getSelectionModel().getSelectedItem()).getId();
         }
+
+        Product product = model.getInventory().findProduct(search);
+        if (product != null) {
+            model.addProductToCart(product);
+            updateInventoryScreen();
+            updateCartScreen();
+        } else {
+            System.out.println("Not found");
+        }
+        search = null;
         itemId.setText("");
     }
 
     public void removeFromCart(ActionEvent actionEvent) {
-        String search = itemId.getText();
-        if (search != null) {
-            Product product = model.getCart().findProduct(search);
-            if (product != null) {
-                model.removeProductFromCart(product);
-                updateInventoryScreen();
-                updateCartScreen();
-            } else {
-                System.out.println("Not found");
-            }
+        if (!itemId.getText().isEmpty()) {
+            search = itemId.getText();
+        } else {
+            if (cart.getSelectionModel().getSelectedItem() != null)
+                search = ((Phone) cart.getSelectionModel().getSelectedItem()).getId();
         }
+        Product product = model.getCart().findProduct(search);
+        if (product != null) {
+            model.removeProductFromCart(product);
+            updateInventoryScreen();
+            updateCartScreen();
+        } else {
+            System.out.println("Not found");
+        }
+        search = null;
         itemId.setText("");
     }
 
