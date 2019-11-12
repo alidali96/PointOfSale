@@ -2,6 +2,8 @@ package controller;
 
 import app.Phone;
 import app.Product;
+import javafx.beans.property.ReadOnlyObjectPropertyBase;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import javafx.util.Callback;
 import model.Model_2;
 
 import java.net.URL;
@@ -42,6 +45,8 @@ public class Controller_2 implements Initializable {
     TableColumn<Product, String> inventoryModel;
     @FXML
     TableColumn<Product, Double> inventoryPrice;
+    @FXML
+    TableColumn<Product, Product> inventoryDetails;
 
 
     @FXML
@@ -54,7 +59,8 @@ public class Controller_2 implements Initializable {
     TableColumn<Product, String> cartModel;
     @FXML
     TableColumn<Product, Double> cartPrice;
-
+    @FXML
+    TableColumn<Product, Product> cartDetails;
 
     @FXML
     TextArea saleDisplay;
@@ -77,6 +83,27 @@ public class Controller_2 implements Initializable {
         inventoryModel.setCellValueFactory(new PropertyValueFactory<>("model"));
         inventoryPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
 
+        // Button
+        inventoryDetails.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+
+        inventoryDetails.setCellFactory(param -> new TableCell<Product, Product>() {
+            Button button = new Button("Details");
+
+            @Override
+            protected void updateItem(Product product, boolean empty) {
+                super.updateItem(product, empty);
+
+                if (product == null) {
+                    setGraphic(null);
+                    return;
+                }
+
+                button.setOnAction(e-> System.out.println(product));
+                setGraphic(button);
+            }
+        });
+
+
 
         inventoryItems = model.getInventoryItems();
         inventory.setEditable(true);
@@ -88,6 +115,27 @@ public class Controller_2 implements Initializable {
         cartBrand.setCellValueFactory(new PropertyValueFactory<>("brand"));
         cartModel.setCellValueFactory(new PropertyValueFactory<>("model"));
         cartPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        // Button
+        cartDetails.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+
+        cartDetails.setCellFactory(param -> new TableCell<Product, Product>() {
+            Button button = new Button("Details");
+
+            @Override
+            protected void updateItem(Product product, boolean empty) {
+                super.updateItem(product, empty);
+
+                if (empty) {
+                    setGraphic(null);
+                    return;
+                }
+
+                button.setOnAction(e-> System.out.println(product));
+                setGraphic(button);
+            }
+        });
+
 
 
         cartItems = model.getCartItems();

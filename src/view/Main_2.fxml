@@ -38,16 +38,18 @@
         <columns>
           <TableColumn fx:id="inventoryID" minWidth="-Infinity" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="inventoryBrand" minWidth="-Infinity" prefWidth="125.0" text="Brand" />
-            <TableColumn fx:id="inventoryModel" minWidth="-Infinity" prefWidth="200.0" text="Model" />
-            <TableColumn fx:id="inventoryPrice" minWidth="-Infinity" prefWidth="150.0" text="Price" />
+            <TableColumn fx:id="inventoryModel" minWidth="-Infinity" prefWidth="150.0" text="Model" />
+            <TableColumn fx:id="inventoryPrice" minWidth="-Infinity" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="inventoryDetails" prefWidth="100.0" text="Details" />
         </columns>
       </TableView>
       <TableView fx:id="cart" layoutX="25.0" layoutY="330.0" prefHeight="260.0" prefWidth="550.0">
          <columns>
             <TableColumn fx:id="cartID" minWidth="-Infinity" prefWidth="75.0" text="ID" />
             <TableColumn fx:id="cartBrand" minWidth="-Infinity" prefWidth="125.0" text="Brand" />
-            <TableColumn fx:id="cartModel" minWidth="-Infinity" prefWidth="200.0" text="Model" />
-            <TableColumn fx:id="cartPrice" minWidth="-Infinity" prefWidth="150.0" text="Price" />
+            <TableColumn fx:id="cartModel" minWidth="-Infinity" prefWidth="150.0" text="Model" />
+            <TableColumn fx:id="cartPrice" minWidth="-Infinity" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="cartDetails" prefWidth="100.0" text="Details" />
          </columns>
       </TableView>
       <Pane fx:id="paymentPane" layoutX="25.0" layoutY="600.0" prefHeight="30.0" prefWidth="550.0" visible="false">
